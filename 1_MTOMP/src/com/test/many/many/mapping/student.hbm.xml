@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.test.many.many.pojo.Student" table="student" >
+        <id name="rollno" >
+            <column name="ROLLNO" />
+            <generator class="assigned" />
+        </id>
+        
+        <property name="studentname" type="string" column="NAME" length="20" not-null="true" />
+        <property name="branch" type="string" column ="BRANCH" length="20" not-null="true" />
+        <property name="collegename" type="string" column ="COLLEGE_NAME" length="20" not-null="true" />
+        
+<set name="colleges" table="UNIVERCITY12"  lazy="true"  fetch="select" cascade="save-update">
+            <key column ="ROLLNO" not-null="true" />
+            <many-to-many entity-name="com.test.many.many.pojo.College">
+                <column name="COLLEGE_ID" not-null="true" />
+            </many-to-many>
+        </set>
+        
+    </class>
+</hibernate-mapping>

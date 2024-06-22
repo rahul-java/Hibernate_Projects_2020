@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="max.RBean" table="r_b">
+	<id name="adhar" column="adhar">
+	<generator class="assigned"/>
+	</id>
+	<property name="uname" column="uname"/>
+	<property name="dob" column="dob"/>
+	
+		<property name="add" column="add"/>
+	<property name="gender" column="gender"/>
+		<property name="education" column="education"/>
+	
+	
+	
+	</class>
+	
+	
+	
+
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="rahul.hibernate.EmpBean" table="Employee">
+    <id name="emp_id" column="emp_id">
+<!--     <generator class="native"/> -->
+    </id>
+    <property name="emp_name" length="20" column="emp_name"/>
+    <property name="emp_email" length="20" column="emp_email"/>
+  </class>
+ 
+</hibernate-mapping>

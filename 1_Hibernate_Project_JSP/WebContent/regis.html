@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Data sheet</title>
+
+
+</head>
+
+<body bgcolor="palegoldenrod">
+<h1>Data Sheet</h1>
+
+<form action="FirstServlet">
+  <table border="3" bgcolor="lightskyblue" align="center">
+
+<tr><td>User Name </td>
+<td><input type="text" name="uname" id="un"></td>
+
+<td>Adhar</td>
+<td><input type="text" name="adhar" id="adhar"></td>
+</tr>
+
+<tr><td>DOB</td><td><input type="text" name="dob" id="dob"></td></tr>
+<tr><td>Address</td><td><input type="text" name="add" id="add"></td></tr>
+<tr><td>Gender</td>
+<td><input type="radio" name="gender" value="m" checked> Male<br>
+ <input type="radio" name="gender" value="f"> Female<br></td>
+ 
+
+</tr>
+
+<tr>
+<td>Education</td>
+
+<td>
+<select name="education">
+<option value="B.tech">B.tech</option>
+<option value="Mca">Mca</option>
+<option value="BCA">BCA</option>
+<option value="BED">BED</option>
+</select>
+</td>
+</tr>
+
+<tr><td><input type="submit" value="save">
+<!-- <input type="submit">
+ --></td>
+ <td><a href=ViewServlet>View</a></td>
+ 
+ </tr>
+
+
+</table>
+</form>
+</body>
+</html>

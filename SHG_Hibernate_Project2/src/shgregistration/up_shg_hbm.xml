@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="shgregistration.SHGMemberDetail" table="up_shgmember">
+	<id name="memeberCode" column="shg_member">
+	<generator class ="native"/> 
+	</id>
+	
+	<property name="cname" column="cname"/>
+	  <property name="age" column="age"/>
+		<property name="cadhar" column="cadhar"/>
+	
+</class>
+
+<class name="shgregistration.SHGdetail" table="up_shgdetail">
+	<id name="shgCode" column="shg_code">
+	<generator class ="native"/> 
+	</id>
+	
+	<property name="stateCode" column="state_code"/>
+	  <property name="distCode" column="dist_code"/>
+		<property name="shgName" column="shg_name"/>
+	<property name="acount" column="shg_acount"/>
+		<property name="ifsc" column="shg_ifsc"/>
+		
+		<list name="mlist" cascade="save-update">
+			<key column="shg_code" />
+			<index column="INDX" />
+			<one-to-many class="shgregistration.SHGMemberDetail"/>
+		</list>
+		
+		
+	</class>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</hibernate-mapping>
